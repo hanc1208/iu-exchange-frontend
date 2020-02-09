@@ -21,7 +21,6 @@
     "emitDecoratorMetadata": false,
     "sourceMap": true,
     "types": [
-      "mocha",
       "node"
     ]
   },

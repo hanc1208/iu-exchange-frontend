@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 
 import App from 'components/App';
 import reducer, { RootState } from 'store/reducer';
 
-export const store = createStore<RootState>(reducer);
+export const store = createStore<RootState>(reducer, applyMiddleware(thunk));
 const container = document.getElementById('root');
 
 const run = () => {
